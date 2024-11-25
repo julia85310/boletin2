@@ -29,22 +29,24 @@ export default function StudentList(){
     }
 
     function handleDeleteStudent(indexStudent){
-        setEstudiantes([
+        setEstudiantes(
             estudiantes.filter((_, index) => index !== indexStudent)
-        ]);
+        );
     }
 
     return(
         <>
-            <textarea value={textoTextArea} placeholder='Nombre del estudiante' onChange={handleWriteTextArea}></textarea>
+            <input type='text' value={textoTextArea} placeholder='Nombre del estudiante' onChange={handleWriteTextArea}></input>
             <button onClick = {handleInsertStudent}>Insertar</button>
             <ul>
-                {estudiantes.map((estudiante, index) => {
+                {
+                estudiantes.length > 0 &&
+                estudiantes.map((estudiante, index) => 
                     <li key={index}>
                         {estudiante}
                         <button onClick={() => handleDeleteStudent(index)}>Eliminar</button>
                     </li>
-                })}
+                )}
             </ul>
         </>
     );
