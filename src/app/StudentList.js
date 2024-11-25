@@ -4,6 +4,48 @@ una lista. Agrega un botón al lado de cada nombre para eliminar estudiantes esp
 la lista.
 Objetivos: useState, manipulación de arrays.
 */
+
+import {useState} from 'react';
+
 export default function StudentList(){
-    
+
+    const [estudiantes, setEstudiantes] = useState([]);
+    const [textoTextArea, setTextoTextArea] = useState('');
+
+    function handleWriteTextArea(e){
+        setTextoTextArea(e.target.value);
+    }
+
+    function handleInsertStudent(){
+        if (textoTextArea !== ''){
+            setEstudiantes(
+                [
+                    ...estudiantes,
+                    textoTextArea
+                ]
+            );
+            setTextoTextArea('');
+        }
+    }
+
+    function handleDeleteStudent(indexStudent){
+        setEstudiantes([
+            estudiantes.filter((_, index) => index !== indexStudent)
+        ]);
+    }
+
+    return(
+        <>
+            <textarea value={textoTextArea} placeholder='Nombre del estudiante' onChange={handleWriteTextArea}></textarea>
+            <button onClick = {handleInsertStudent}>Insertar</button>
+            <ul>
+                {estudiantes.map((estudiante, index) => {
+                    <li key={index}>
+                        {estudiante}
+                        <button onClick={() => handleDeleteStudent(index)}>Eliminar</button>
+                    </li>
+                })}
+            </ul>
+        </>
+    );
 }
