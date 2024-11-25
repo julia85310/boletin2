@@ -13,7 +13,7 @@ import Ejercicio10 from './GuessTheNumber';
 import Ejercicio11 from './TimeCounter';
 import Ejercicio12 from './ThemeSelector';
 import Ejercicio1314 from './LiveValidationForm';
-import Ejercicio15 from './TextCarouse1';
+import Ejercicio15 from './TextCarousel';
 
 export default function Home() {
   return (
