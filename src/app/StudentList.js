@@ -35,7 +35,7 @@ export default function StudentList(){
     }
 
     return(
-        <>
+        <div>
             <input type='text' value={textoTextArea} placeholder='Nombre del estudiante' onChange={handleWriteTextArea}></input>
             <button onClick = {handleInsertStudent}>Insertar</button>
             <ul>
@@ -48,6 +48,6 @@ export default function StudentList(){
                     </li>
                 )}
             </ul>
-        </>
+        </div>
     );
 }
