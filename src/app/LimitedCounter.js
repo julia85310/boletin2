@@ -8,10 +8,10 @@ import {useState} from 'react';
 export default function LimitedCounter(){
     const [contador, setContador] = useState(0);
     const [valorMax, setValorMax] = useState(0);
-    const [inputValue, setInputValue] = useState(0);
-    return <>
+    const [inputValue, setInputValue] = useState('');
+    return <div>
         {valorMax !== 0 ?
-            (<div>
+            (<span>
                 <p> 
                     Contador: {contador}
                     {valorMax > contador &&
@@ -19,10 +19,10 @@ export default function LimitedCounter(){
                     <button onClick={() => setContador(0)}>Reiniciar</button>
                 </p>
                 <p>Valor maximo actual: {valorMax}</p>
-            </div>) : <p>Debes introducir un valor maximo mayor que 0</p>
+            </span>) : <p>Debes introducir un valor maximo mayor que 0</p>
             
         }
         <input type='number' value={inputValue} placeholder='Inserte su valor maximo' onChange={(e) => setInputValue(e.target.value)}></input>
-        <button onClick={() => {setValorMax(inputValue); setInputValue(0);}}>{valorMax > 0? 'Actualizar' : 'Establecer'}</button>
-    </>
+        <button onClick={() => {setValorMax(inputValue); setInputValue('');}}>{valorMax > 0? 'Actualizar' : 'Establecer'}</button>
+    </div>
 }
