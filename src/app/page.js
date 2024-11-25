@@ -66,7 +66,7 @@ export default function Home() {
 function Separacion(){
   return <img
     src = 'https://colorate.azurewebsites.net/SwatchColor/FFFFFF'
-    height = {300}
+    height = {100}
   >
   </img>
 }
