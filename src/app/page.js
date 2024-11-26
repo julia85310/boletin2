@@ -12,7 +12,7 @@ import Ejercicio9 from './UserTable';
 import Ejercicio10 from './GuessTheNumber';
 import Ejercicio11 from './TimeCounter';
 import Ejercicio12 from './ThemeSelector';
-import Ejercicio1314 from './LiveValidationForm';
+import Ejercicio13 from './LiveValidationForm';
 import Ejercicio15 from './TextCarousel';
 
 const imagenes = [
@@ -64,8 +64,8 @@ export default function Home() {
       <h1>Ejercicio 12</h1>
       <Ejercicio12/>
       <Separacion/> 
-      <h1>Ejercicio 13 y 14</h1>
-      <Ejercicio1314/>
+      <h1>Ejercicio 13</h1>
+      <Ejercicio13/>
       <Separacion/> 
       <h1>Ejercicio 15</h1>
       <Ejercicio15/>
