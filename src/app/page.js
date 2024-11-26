@@ -15,6 +15,16 @@ import Ejercicio12 from './ThemeSelector';
 import Ejercicio1314 from './LiveValidationForm';
 import Ejercicio15 from './TextCarousel';
 
+const imagenes = [
+  'https://i.imgur.com/qY9uDfZ.jpeg',
+  'https://i.imgur.com/s8x9tyZ.jpeg',
+  'https://i.imgur.com/1Ioqd6l.jpeg',
+  'https://i.imgur.com/UvlTCNs.jpeg',
+  'https://i.imgur.com/yS7f4sG.jpeg'
+];
+
+
+
 export default function Home() {
   return (
     <div>
@@ -37,7 +47,7 @@ export default function Home() {
       <Ejercicio6/>
       <Separacion/> 
       <h1>Ejercicio 7</h1>
-      <Ejercicio7/>
+      <Ejercicio7 imagenes={imagenes}/>
       <Separacion/> 
       <h1>Ejercicio 8</h1>
       <Ejercicio8/>
