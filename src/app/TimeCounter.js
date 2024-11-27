@@ -5,5 +5,9 @@ reiniciar el contador.
 Objetivos: useState, cálculos basados en estado.
 */
 export default function TimeCounter(){
-    
+    return(
+      <div>
+        No hacer
+      </div>
+    );
 }

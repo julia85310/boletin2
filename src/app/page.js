@@ -23,6 +23,12 @@ const imagenes = [
   'https://i.imgur.com/yS7f4sG.jpeg'
 ];
 
+const frases = [
+  'Hola mi amor',
+  'Tengo que hablar contigo',
+  'Estoy cansaadoOoO',
+  'Estoy hecho un lio'
+];
 
 
 export default function Home() {
@@ -68,7 +74,7 @@ export default function Home() {
       <Ejercicio13/>
       <Separacion/> 
       <h1>Ejercicio 15</h1>
-      <Ejercicio15/>
+      <Ejercicio15 frases={frases}/>
     </div>
   );
 }
